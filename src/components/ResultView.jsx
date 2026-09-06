@@ -68,8 +68,6 @@ export default function ResultView({ captureData, onRetake }) {
     }
   }
 
-  const canShare = typeof navigator.share === 'function' && typeof navigator.canShare === 'function';
-
   return (
     <div className="result-view">
       <div className="result-view__image-wrap">
@@ -127,11 +125,6 @@ export default function ResultView({ captureData, onRetake }) {
           <button className="btn btn--primary" onClick={handleDownload} disabled={!previewUrl}>
             ⬇ Download
           </button>
-          {canShare && (
-            <button className="btn btn--secondary" onClick={handleShare} disabled={!previewUrl}>
-              ↗ Share
-            </button>
-          )}
         </div>
       </div>
     </div>
